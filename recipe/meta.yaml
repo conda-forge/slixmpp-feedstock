@@ -1,5 +1,5 @@
 {% set name = "slixmpp" %}
-{% set version = "1.7.1" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9af836dc5747259788651726f062d69a6f430d306ddbd8e6b141c1fec99549e7
+  sha256: 4204c80bee09b400fd9e74be7c9299c05d1a24422b1663c791883c70f81799c0
 
 build:
   number: 0
