@@ -6,22 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 75e3f0ad48555f7f5c9228e7066c1d4358b33d640b4fbe773ec34b03b7fae9a3
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
+    - {{ stdlib("c") }}    # [not win]
     - pkg-config  # [not win]
   host:
     - cython  # [not win]
     - libidn11  # [not win]
     - pip
     - python
+    - setuptools
   run:
     - aiodns >=1.0
     - libidn11  # [not win]
