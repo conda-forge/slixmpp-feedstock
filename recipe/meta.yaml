@@ -23,6 +23,7 @@ requirements:
     - libidn11  # [not win]
     - pip
     - python
+    - setuptools
   run:
     - aiodns >=1.0
     - libidn11  # [not win]
